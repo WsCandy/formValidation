@@ -6,3 +6,111 @@
 	margin: 0;
 
 }
+
+body {
+
+	background: url(../img/1.jpg) top center;
+	padding: 50px 0 0 0;
+
+}
+
+.form-container {
+
+	border: 3px solid black;
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto 30px auto;
+	padding: 20px 20px 5px 20px;
+	background: rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+
+}
+
+.form__field {
+
+	width: 100%;
+	float: left;
+	clear: both;
+	margin: 0 0 15px 0;
+	position: relative;
+
+}
+
+form {
+
+	width: 100%;
+	float: left;
+
+	input {
+
+		width: 100%;
+		float: left;
+		height: 28px;
+		padding: 0 5px;
+		background: white;
+		border: 1px solid black;
+
+		&.field-error {
+
+			border-color: #b42c2c;
+
+		}
+
+	}
+
+	label {
+
+		font-family : Arial, sans-serif;
+		float: left;
+		font-size: 12px;
+		line-height: 26px;
+
+	}
+
+	button {
+
+		height: 28px;
+		float: right;
+		background: black;
+		color: white;
+		font-family: Arial, sans-serif;
+		border: 0;
+		padding: 0 10px;
+		text-transform: uppercase;
+
+		&:hover {
+
+			color: black;
+			background: white
+
+		}
+
+	}
+
+}
+
+.error-tooltip {
+
+	background: #b42c2c;
+	line-height: 24px;
+	color: white;
+	font-size: 12px;
+	float: right;
+	padding: 0 10px;
+	position: absolute;
+	z-index: 10;
+	right: -10px;
+	bottom: 2px;
+	opacity: 0;
+
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+
+	&.active {
+
+		right: 2px;
+		opacity : 1.0;
+
+	}
+
+}

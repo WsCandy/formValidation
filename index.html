@@ -7,83 +7,78 @@
 		<link rel="stylesheet" href="css/FV.css" />
 	</head>
 	<body>
-		<form class="form form--secondary login-form" action="https://boroughkitchen.ecom.prop.cm/customer/login" novalidate="true" accept-charset="utf-8" method="post">        
-			<div class="form__field">
-				<label id="label_email" for="email" class="form__label">Email</label>
-				<input type="email" placeholder="Email" required="required" id="email" name="email" value="">
-			</div>	        
-			<div class="form__field">
-				<label id="label_password" for="password" class="form__label">Password</label>
-				<input type="password" placeholder="Password" required="required" id="password" name="password" value="">
-			</div>
-	        <div class="form__field">
-	            <button class="btn  btn--large  btn--white-on-black  btn--icon  fr" type="submit" name="submit">submit</button>
-	        </div>
-        </form>
-
-        <form class="form form--secondary" action="https://boroughkitchen.ecom.prop.cm/customer/signup" novalidate="true" accept-charset="utf-8" method="post">
-        
-			<div class="form__field">
-				<label id="label_title" for="title" class="form__label">title</label>
-					<select class="select js-select-title" title="Select Title" required="required" id="title" name="title" style="z-index: 10; opacity: 0;">
-						<option value="Mr">Mr</option>
-						<option value="Mrs">Mrs</option>
-						<option value="Ms">Ms</option>
-						<option value="Miss">Miss</option>
-						<option value="Dr">Dr</option>
-					</select>
-			</div>
-
-			<div class="form__field">
-				<label id="label_forename" for="forename" class="form__label">First Name</label>
-				<input type="text" required="required" placeholder="First Name *" id="forename" name="forename" value="">			
-			</div>
-
+		<div class="form-container">
+			<form class="form form--secondary login-form" action="https://boroughkitchen.ecom.prop.cm/customer/login" novalidate="true" accept-charset="utf-8" method="post">        
+				<div class="form__field">
+					<label id="label_email" for="email" class="form__label">Email</label>
+					<input type="email" placeholder="Email" required="required" id="email" name="email" value="">
+				</div>	        
+				<div class="form__field">
+					<label id="label_password" for="password" class="form__label">Password</label>
+					<input type="password" placeholder="Password" required="required" id="password" name="password" value="">
+				</div>
+		        <div class="form__field">
+		            <button class="btn  btn--large  btn--white-on-black  btn--icon  fr" type="submit" name="submit">submit</button>
+		        </div>
+	        </form>			
+		</div>
+		<div class="form-container">
+	        <form class="form form--secondary" action="https://boroughkitchen.ecom.prop.cm/customer/signup" novalidate="true" accept-charset="utf-8" method="post">
 	        
-			<div class="form__field">
-				<label id="label_surname" for="surname" class="form__label">Last Name</label>
-				<input type="text" required="required" placeholder="Last Name *" id="surname" name="surname" value="">
-					
-			</div>
+				<div class="form__field">
+					<label id="label_title" for="title" class="form__label">title</label>
+						<select class="select js-select-title" title="Select Title" required="required" id="title" name="title" style="z-index: 10; opacity: 0;">
+							<option value="Mr">Mr</option>
+							<option value="Mrs">Mrs</option>
+							<option value="Ms">Ms</option>
+							<option value="Miss">Miss</option>
+							<option value="Dr">Dr</option>
+						</select>
+				</div>
 
-	        
-			<div class="form__field">
-				<label id="label_phone" for="phone" class="form__label">Contact No.</label>
-				<input type="text" placeholder="Telephone" id="phone" name="phone" value="">
-					
-			</div>
+				<div class="form__field">
+					<label id="label_forename" for="forename" class="form__label">First Name</label>
+					<input type="text" required="required" placeholder="First Name *" id="forename" name="forename" value="">			
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_surname" for="surname" class="form__label">Last Name</label>
+					<input type="text" required="required" placeholder="Last Name *" id="surname" name="surname" value="">
+						
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_phone" for="phone" class="form__label">Contact No.</label>
+					<input type="text" placeholder="Telephone" id="phone" name="phone" value="">
+						
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_email" for="email" class="form__label">Email</label>
+					<input type="text" required="required" placeholder="Email *" id="email" name="email" value="">
+						
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_email2" for="email2" class="form__label">Confirm email</label>
+					<input type="text" required="required" placeholder="Confirm Email *" id="email2" name="email2" value="">				
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_password" for="password" class="form__label">Password</label>
+					<input type="password" required="required" placeholder="Password * (minimum of seven characters)" id="password" name="password" value="">				
+				</div>
+		        
+				<div class="form__field">
+					<label id="label_password2" for="password2" class="form__label">Confirm password</label>
+					<input type="password" required="required" placeholder="Confirm Password" id="password2" name="password2" value="">		
+				</div>
 
-	        
-			<div class="form__field">
-				<label id="label_email" for="email" class="form__label">Email</label>
-				<input type="text" required="required" placeholder="Email *" id="email" name="email" value="">
-					
-			</div>
+		        <div class="form__field">
+		            <button class="btn  btn--large  btn--white-on-black  btn--icon  fr" type="submit" name="submit">submit</button>
+		        </div>
 
-	        
-			<div class="form__field">
-				<label id="label_email2" for="email2" class="form__label">Confirm email</label>
-				<input type="text" required="required" placeholder="Confirm Email *" id="email2" name="email2" value="">				
-			</div>
-
-	        
-			<div class="form__field">
-				<label id="label_password" for="password" class="form__label">Password</label>
-				<input type="password" required="required" placeholder="Password * (minimum of seven characters)" id="password" name="password" value="">				
-			</div>
-
-	        
-			<div class="form__field">
-				<label id="label_password2" for="password2" class="form__label">Confirm password</label>
-				<input type="password" required="required" placeholder="Confirm Password" id="password2" name="password2" value="">		
-			</div>
-
-
-	        <div class="form__field">
-	            <button class="btn  btn--large  btn--white-on-black  btn--icon  fr" type="submit" name="submit">submit</button>
-	        </div>
-
-        </form>
-
+	        </form>			
+		</div>
 	</body>
 </html>
