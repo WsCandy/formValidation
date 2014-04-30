@@ -52,7 +52,8 @@ form {
     text-transform: uppercase; }
     form button:hover {
       color: black;
-      background: white; }
+      background: white;
+      cursor: pointer; }
   form .select-wrap {
     width: 200px;
     position: relative;
