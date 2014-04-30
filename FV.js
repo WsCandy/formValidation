@@ -57,7 +57,8 @@
 
 		instance.defaults = {
 
-			wrapper : '.form__field'
+			wrapper : '.form__field',
+			tooltip : true
 
 		}
 
@@ -173,78 +174,83 @@
 					
 				}
 
-				switch(error) {
+				if(settings.tooltip) {
 
-					case 'compare' :
+					switch(error) {
 
-						var message = 'These fields need to match';
+						case 'compare' :
 
-					break;
+							var message = 'These fields need to match';
 
-					case 'email' :
+						break;
 
-						var message = 'Please enter a valid email address';
+						case 'email' :
 
-					break;
+							var message = 'Please enter a valid email address';
 
-					case 'check' : 
+						break;
 
-						var message = 'Please check this field to continue';
+						case 'check' : 
 
-					break;
+							var message = 'Please check this field to continue';
 
-					case 'radio' :
+						break;
 
-						var message = 'Please check one of the marked fields';
+						case 'radio' :
 
-					break;
+							var message = 'Please check one of the marked fields';
 
-					default : 
+						break;
 
-						var message = 'Please enter a valid value';
+						default : 
 
-					break;
+							var message = 'Please enter a valid value';
 
-				}
+						break;
 
-				var parent = type != 'radio' ? element.closest(settings.wrapper) : element.closest(settings.wrapper).parent();
-				var tooltip = parent.find('.error-tooltip');
+					}
 
-				if(tooltip.size() <= 0) {
+					var parent = type != 'radio' ? element.closest(settings.wrapper) : element.closest(settings.wrapper).parent();
+					var tooltip = parent.find('.error-tooltip');
 
-					$('<div />', {
+					if(tooltip.size() <= 0) {
 
-						'class' : 'error-tooltip',
-						'text' : message
+						$('<div />', {
 
-					}).appendTo(parent);
+							'class' : 'error-tooltip',
+							'text' : message
 
-					tooltip = parent.find('.error-tooltip');
+						}).appendTo(parent);
 
-					setTimeout(function() {
+						tooltip = parent.find('.error-tooltip');
 
+						setTimeout(function() {
+
+							tooltip.addClass('active');
+
+						}, 100);
+
+					} else {
+
+						tooltip.text(message);
 						tooltip.addClass('active');
 
-					}, 100);
+					}
 
-				} else {
+					element.focus(function() {
 
-					tooltip.text(message);
-					tooltip.addClass('active');
+						tooltip.removeClass('active');
 
+					});
+
+					tooltip.click(function() {
+
+						element.focus();
+
+					});				
+					
 				}
 
-				element.focus(function() {
-
-					tooltip.removeClass('active');
-
-				});
-
-				tooltip.click(function() {
-
-					element.focus();
-
-				});				
 
 
 			},
