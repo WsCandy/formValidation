@@ -5,6 +5,48 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script type="text/javascript" src="FV.js"></script>
 		<link rel="stylesheet" href="css/FV.css" />
+
+		<script type="text/javascript">
+
+			function createSelects() {
+			
+			    $('select.select').each(function(){
+			        if (!$(this).parent().is('.select-wrap')) {
+			            /* added select-wrap around select and span as it cant be done with php */
+			            $(this).wrap("<div class='select-wrap' />");
+			        }
+
+			        var title = $(this).attr('title');
+
+			        if($('option:selected', this).val()) { title = $('option:selected',this).text() };
+
+			        $(this)
+			            .css({'z-index':10,'opacity':0})
+			            .after('<span class="select">' + title + '</span>')
+			            .on('change, change.address-form', function(){
+			                var val = $(this).find(':selected').text().length > 0 ? $(this).find(':selected').text() : 'Select';
+			                // TODO find a way to do this without repeating the markup.
+			                $(this).next().text(val);
+
+			            });
+			    });
+
+			    $('select').each(function () {
+			        if($(this).hasClass('error')) {
+			            $(this).siblings('span.select').addClass('select--error');
+			        }
+			    });
+
+			};
+
+			$(document).ready(function() {
+
+				createSelects();
+
+			});
+
+		</script>
+
 	</head>
 	<body>
 		<div class="form-container">
@@ -28,6 +70,7 @@
 				<div class="form__field">
 					<label id="label_title" for="title" class="form__label">title</label>
 						<select class="select js-select-title" title="Select Title" required="required" id="title" name="title" style="z-index: 10; opacity: 0;">
+							<option value="">Select Title</option>
 							<option value="Mr">Mr</option>
 							<option value="Mrs">Mrs</option>
 							<option value="Ms">Ms</option>

@@ -53,6 +53,30 @@ form {
     form button:hover {
       color: black;
       background: white; }
+  form .select-wrap {
+    width: 200px;
+    position: relative;
+    float: left;
+    clear: both;
+    height: 28px; }
+    form .select-wrap span {
+      width: 100%;
+      height: 28px;
+      background: white;
+      border: 1px solid black;
+      float: left;
+      clear: both;
+      position: relative;
+      line-height: 26px;
+      padding: 0 10px;
+      font-size: 12px;
+      font-family: Arial; }
+      form .select-wrap span.field-error {
+        border-color: #b42c2c; }
+    form .select-wrap select {
+      position: absolute;
+      opacity: 0;
+      width: 100%; }
 
 .error-tooltip {
   background: #b42c2c;
