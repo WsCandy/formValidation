@@ -61,6 +61,6 @@ Methods
 
 There is only currently one method that you can fire which is the validate method, see below:
 
-	$('form').FV('validate');	// Validate the selected form, in this case it will be all forms on the page, it WILL NOT submit the form for you.
+	$('form').formValidation('validate');	// Validate the selected form, in this case it will be all forms on the page, it WILL NOT submit the form for you.
 
 That's everything. Keep an eye out for updates.
