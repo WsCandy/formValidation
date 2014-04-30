@@ -57,10 +57,7 @@
 
 		instance.defaults = {
 
-			message : true,
-			realtime : false,
-			labelfields : false,
-			compare : true
+			wrapper : '.form__field'
 
 		}
 
@@ -210,7 +207,7 @@
 
 				}
 
-				var parent = type != 'radio' ? element.closest('.form__field') : element.closest('.form__field').parent();
+				var parent = type != 'radio' ? element.closest(settings.wrapper) : element.closest(settings.wrapper).parent();
 				var tooltip = parent.find('.error-tooltip');
 
 				if(tooltip.size() <= 0) {
