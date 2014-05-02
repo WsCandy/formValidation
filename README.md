@@ -13,6 +13,7 @@ This custom front end form validation disableds HTML5 validation and allows for 
 * The code finds and compares fields against one another and cross validated them, e.g Email and Confrim Email fields.
 * Checks Validity of Email addresses and phone numbers.
 * Cross references radio buttons and validates accordingly.
+* Derives what type of field you're filling in, e.g e-mail, password, telephone number etc and validates accordingly.
 
 Basic Implementation
 ---
@@ -23,7 +24,11 @@ Basic Implementation
 
 	});
 
-	<input type="text" required="required" />
+	<form action="/submit.php">
+		<div class="form__field">
+			<input type="text" required="required" />
+		</div>
+	</form>
 
 You can use any selector not just form, 'form' will fire on every form on the site, however if the form doesn't contain any fields with 'required="required"' on them then it won't run!
 
