@@ -1,6 +1,6 @@
 ;(function() {
 
-	var version = '2.0',
+	var version = '2.1',
 		pluginName = 'Form Validation';
 
 	$.fn.formValidation = function(options, param) {
