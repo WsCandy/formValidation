@@ -58,7 +58,8 @@
 		instance.defaults = {
 
 			wrapper : '.form__field',
-			tooltip : true
+			tooltip : true,
+			compare : true
 
 		}
 
@@ -345,7 +346,7 @@
 
 								instance.private_methods.errorFields(requiredElement, type, data);
 								
-							} else if(instance.private_methods.findFields(requiredElements, data).length > 1) {
+							} else if(instance.private_methods.findFields(requiredElements, data).length > 1 && settings.compare == true) {
 
 								instance.private_methods.compareFields(requiredElement, type, instance.private_methods.findFields(requiredElements, data));
 
@@ -418,6 +419,12 @@
 				}
 
 				return self.find('.field-error').size() > 0 ? false : true;
+
+			},
+
+			updateSettings: function(updates) {
+
+				$.extend(settings, updates);
 
 			}
 
