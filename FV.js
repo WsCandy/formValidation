@@ -59,7 +59,8 @@
 
 			wrapper : '.form__field',
 			tooltip : true,
-			compare : true
+			compare : true,
+			ajax : false
 
 		}
 
@@ -436,6 +437,10 @@
 
 $(document).ready(function() {
 
-	$('form').formValidation();
+	$('form').formValidation({
+
+		ajax : true
+
+	});
 
 });
