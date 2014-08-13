@@ -82,6 +82,8 @@
 
 				self.attr('novalidate', 'true');
 
+				if(settings.ajax) instance.private_methods['ajax'].setUp();
+
 				self.submit(function() {
 
 					if(instance.public_methods.validate() == false) {
@@ -95,6 +97,16 @@
 					}
 
 				});
+
+			},
+
+			ajax: {
+
+				setUp: function() {
+
+					
+
+				}
 
 			},
 
