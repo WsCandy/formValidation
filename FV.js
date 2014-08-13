@@ -1,5 +1,7 @@
 ;(function() {
 
+	'use strict';
+
 	var version = '2.1',
 		pluginName = 'Form Validation';
 
@@ -104,7 +106,7 @@
 
 				setUp: function() {
 
-					
+
 
 				}
 
