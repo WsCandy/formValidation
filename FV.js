@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var version = 'Tester, download older version!',
+	var version = '2.1',
 		pluginName = 'Form Validation';
 
 	$.fn.formValidation = function(options, param) {
